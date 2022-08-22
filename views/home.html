@@ -1,0 +1,18 @@
+<%- include('header.html') -%>
+    <h1>Your user details</h1>
+    <h4>
+        Name: <%= current_user_name %>
+            <br>
+            Email: <%= current_user_email %>
+    </h4>
+
+    <h1>Other users</h1>
+    <ul id="users">
+        <% users.forEach(function(user){ %>
+            <li>
+                <%= user.name %> &lt;<%= user.email %>&gt;
+            </li>
+            <% }) %>
+    </ul>
+
+    <%- include('footer.html') -%>
